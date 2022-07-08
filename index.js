@@ -16,7 +16,7 @@ limitations under the License.
 
 import { regionOptimizer } from './region-optimizer.js';
 
-const regionsToDisplay = 10;
+const regionsToDisplay = 9;
 
 let regions;
 let fetching;
