@@ -1,0 +1,174 @@
+<!-- 
+Copyright 2021 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AWS region picker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tool to help you pick an AWS region by calculating the lowest latency.">
+  <meta name="theme-color" content="#1c74e9">
+
+  <link rel="icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"> 
+
+  <!-- pre-load resources -->
+  <link rel="modulepreload" href="region-optimizer.js">
+  <!-- <link rel="preload" as="fetch" crossorigin="anonymous" href="data/regions.json"> -->
+  <link rel="preload" as="fetch" crossorigin="anonymous" href="data/countries.json">
+
+  <!-- Flags are from wikipedia-->
+  <link rel="stylesheet" href="style.css">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AWS region picker">
+  <meta name="twitter:description" content="Tool to help you pick an AWS region by calculating the lowest latency.">
+  <meta name="twitter:image" content="https://regionpicker.com/images/aws-region-picker.png">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="AWS region picker">
+  <meta property="og:description" content="Tool to help you pick an AWS region by calculating the lowest latency.">
+
+
+  <script>
+    // Serve either at the root of a domain name, or at a subpath with a trailing slash.
+    // Doesn't work at a subpath without a trailing slash (issue #7).
+    let p = window.location.pathname;
+    if( p.length>=1 && p.slice(-1) !== '/' && p.slice(-10) !== 'index.html' ) {
+      // Then redirect
+      window.location.href += '/';
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AWS region picker",
+    "abstract": "This tool helps you pick an AWS region by calculating the lowest latency to your target location.",
+    "url": "https://regionpicker.com",
+    "image": "https://regionpicker.com/images/aws-region-picker.png"
+  }
+  </script>
+
+</head>
+
+<body>
+<header>
+  <img src="images/logos/aws-logo.svg" class="logo">
+  <button class="icon-button" id="share">Share</button>
+</header>
+
+<main>
+<div class="group">
+  <div class="content search_div">
+    <h1>
+      AWS
+      <br/> 
+      <span class="accent">Region Picker</span>
+    </h1>
+    <p>It’s always hard to pick the right AWS region, 
+      especially when building AWS Cloud or a Server in a location, that's not familiar to you. 
+      This free tool finds Availability Zones, with best metrics for your target.</p>
+     <!-- <p><strong>Why should you care?</strong></p>
+      
+      This tool will calculate through all the availability zones and find one, that's closest to you.</p>
+      <p>This will save you some time, and lower the latency of your EC2, S3 or VPC insance! </p> -->
+      <!-- <p></p>
+      
+      Therefore, we made a tool, that calculates the best set of availability zones for your target 
+      <p>      
+        will have all the availability zones nearby - especially, 
+        when you are building an aws cloud or a server in a region, that’s not familiar to you. Nevertheless everybody knows, 
+        that low-latency is the priority for ex2, 
+        s3 or VPC servers is essential and the geographical location plays the main role in it. 
+  </p> -->
+    <!-- <p>Choosing the right AWS region is one of the first and most important choices you have to make.</p> -->
+    <div class="params">
+      <div id="locations-group">
+        <label for="locations"><h2><span style="color: black">What's your </span> target location<span style="color: black;">?</span></h2></label>
+          <div class="autocomplete-container" id="target_search"></div>
+          <select multiple id="locations">
+            <option id="target_location"></option>
+            </select>
+      </div>
+      <div>
+        <details style="color: grey">
+          <summary>Learn more</summary>
+          <ul class="info">
+            <li></li>
+            <!-- <li>A region is a geographic area where AWS has data centers. Each region has 2 or more Availability Zones, which are independent data centers that are located close to each other.</li> -->
+          </ul>
+          <ul><strong>Is one enough?</strong>
+            <li>It's good practice to distribute your components between 2 availablity zones,
+              in case one instance fails then with a right setup, another backup server or serverless component (like dynamodb, lambda), that will take over. 
+              </li>
+          </ul>
+        </div>
+    </div>
+    </div>
+</div>
+</details>
+
+<div class="group regions">
+  <div class="content">
+    <h2>Recommended regions:</h2>
+    <ol id="results" class="short">
+      <!-- Keep placeholders results to avoid layout shift -->
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <button id="more">More</button>
+  </div>
+</div>
+</main>
+
+<footer>
+  <span class="disclaimer">
+    This is not an officially supported AWS product.
+  </span>
+</footer>
+
+  <template id="result-row">
+    <li>
+        <summary class="list-content">
+          <div class="parent">
+            <h1 class="blank">?</h1>
+            <div class="name-group child">
+              <img class="flag" alt="flag" width="48" height="48"/>
+            </div>
+
+            <span class="colon">:</span>
+
+            <h1 class="blank" alt="unknown">?</h1>
+            <div class="child ">
+              <span class="region region-code"></span>
+              <br/>
+              <span class="name"></span>
+            </div>
+          </div>
+        </summary>
+    </li>
+  </template>
+
+<script type="module" src="index.js"></script>
+<script type="module" src="geoapify.js" defer></script>
+</body></html>
