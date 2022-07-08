@@ -554,6 +554,7 @@ summary.list-content {
   list-style: none;
   /* font-style: italic; */
   text-align: right;
+  margin-top: 7px;
 }
 
 .padding ul {
