@@ -500,6 +500,9 @@ li {
   details[open] {
     margin-left: -25px;
 }
+  .child {
+  font-size: 1.2rem;
+}
 }
 
 ul {
@@ -515,7 +518,7 @@ ul {
 .child {
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: var(--base-unit);
 }
 
