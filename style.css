@@ -100,6 +100,7 @@ footer {
   width: 50%;
   padding: var(--base-unit);
 }
+
 .group .content {
   max-width: var(--base-width);
   margin-left: auto;
@@ -356,7 +357,7 @@ ul {
 
   .group.regions {
     text-align: center;
-    padding-left: calc(1.7 * var(--base-unit));;
+    padding-left: calc(1.85 * var(--base-unit));;
   }
 
   .autocomplete-container input {
@@ -367,6 +368,7 @@ ul {
   details > summary {
     text-align: center !important;
     color: #a9a9a9;
+    margin-top: 15px;
 }
 .logo {
   max-width: 80px !important;
