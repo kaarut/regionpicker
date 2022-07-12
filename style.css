@@ -512,7 +512,7 @@ li {
   }
 
   .child {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -529,14 +529,14 @@ ul {
 .child {
   display: inline-block;
   vertical-align: middle;
-  font-size: 4vh;
+  font-size: 3vh;
   margin: var(--base-unit);
 }
 
 .colon {
   font-size: 1.5rem;
   font-style: initial;
-  color: #eaeaea;
+  color: #969696;
 }
 
 ::marker {
