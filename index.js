@@ -16,7 +16,7 @@ limitations under the License.
 
 import { regionOptimizer } from './region-optimizer.js';
 
-const regionsToDisplay = 9;
+const regionsToDisplay = 10;
 
 let regions;
 let fetching;
@@ -34,7 +34,7 @@ async function fetchData() {
 
   // Fetch data in parrallel
   await Promise.all([
-      fetch("data/regions.json")
+      fetch("data/regions-combined.json")
           .then(data => data.json())
           .then(json => regions = json)
   ]);
@@ -95,6 +95,8 @@ function printResultInList(list, result) {
 
     // document.querySelectorAll(".blank").forEach(element => element.classList.add("hidden"));
 
+  list.appendChild(row);
+
   if (document.getElementById("target_location").value == ""){
     document.querySelectorAll(".child").forEach(element => element.classList.add("hidden"));
   } else {
@@ -102,8 +104,6 @@ function printResultInList(list, result) {
     document.querySelectorAll(".blank").forEach(element => element.classList.add("hidden"));
   }
 
-
-  list.appendChild(row);
 }
 
 
@@ -139,4 +139,3 @@ bindListeners();
 recommendRegion();
 
 export {recommendRegion }
-
