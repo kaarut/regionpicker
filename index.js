@@ -34,7 +34,7 @@ async function fetchData() {
 
   // Fetch data in parrallel
   await Promise.all([
-      fetch("data/regions-combined.json")
+      fetch("data/regions.json")
           .then(data => data.json())
           .then(json => regions = json)
   ]);
@@ -139,3 +139,4 @@ bindListeners();
 recommendRegion();
 
 export {recommendRegion }
+
