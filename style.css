@@ -271,6 +271,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  height: 100px;
 }
 
 #results > li .name-group {
@@ -475,6 +476,7 @@ li {
   margin: 10px;
 }
 
+/* Desktop & Laptop  */
 @media only screen and (min-width: 1400px) {
   .search_div {
     position: sticky;
@@ -500,9 +502,18 @@ li {
   details[open] {
     margin-left: -25px;
 }
-  .child {
-  font-size: 1.2rem;
+
+  details[open] {
+    padding: 25px;
+    margin-left: -25px;
 }
+  #results > li summary {
+    height: 150px;
+  }
+
+  .child {
+    font-size: 1.2rem;
+  }
 }
 
 ul {
@@ -518,7 +529,7 @@ ul {
 .child {
   display: inline-block;
   vertical-align: middle;
-  font-size: 1rem;
+  font-size: 4vh;
   margin: var(--base-unit);
 }
 
@@ -554,7 +565,6 @@ summary.list-content {
   list-style: none;
   /* font-style: italic; */
   text-align: right;
-  margin-top: 7px;
 }
 
 .padding ul {
@@ -574,14 +584,14 @@ details {
 }
 
 details[open] {
-    background-color: #fcfcfc;
     padding: 25px;
-    margin-left: -25px;
+    margin-top: 15px;
 }
 
 .parent {
   display: inline-flex;
   align-items: center;
+  max-height: 100%;
 }
 
 .blank {
