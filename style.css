@@ -500,12 +500,9 @@ li {
   }
 
   details[open] {
-    margin-left: -25px;
-}
-
-  details[open] {
     padding: 25px;
     margin-left: -25px;
+    margin-top: 15px;
 }
   #results > li summary {
     height: 150px;
@@ -529,14 +526,14 @@ ul {
 .child {
   display: inline-block;
   vertical-align: middle;
-  font-size: 3vh;
+  font-size: 1.1rem;
   margin: var(--base-unit);
 }
 
 .colon {
   font-size: 1.5rem;
   font-style: initial;
-  color: #969696;
+  color: #eaeaea;
 }
 
 ::marker {
@@ -585,7 +582,6 @@ details {
 
 details[open] {
     padding: 25px;
-    margin-top: 15px;
 }
 
 .parent {
