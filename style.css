@@ -598,3 +598,61 @@ details[open] {
   margin: 0px 50px;
   font-size: 4em;
 }
+
+.select-icon li {
+  display: inline;
+  /* text-align: center; */
+}
+
+.select-icon li img {
+  max-width: 100px;
+  height: auto;
+}
+
+.google-icon {
+  background-image: url(images/icons/google_cloud_icon.png);
+  width: 100px;
+  height: 100px;
+}
+
+.select-icon i {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: red;
+}
+
+.iaas ul {
+  display: list-item;
+  text-align: center;
+}
+
+.iaas {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-box {
+  flex: 1 0 150px;
+  box-shadow: rgb(9 30 66 / 31%) 0px 0px 1px 0px, rgb(9 30 66 / 25%) 0px 1px 1px 0px;
+  padding: 8px 16px;
+  border: 1px solid rgb(250, 251, 252);
+  /* border: 1px solid var(--theme-color); */
+  border-radius: 30px;
+  margin-top: 16px;
+  margin-left: 16px;
+  position: relative;
+}
+
+.icon-img img{
+  height: 50px;
+  width: auto;
+}
+
+.icon-headline {
+  padding: 1px;
+}
+
+.block {
+  text-align: center;
+}
