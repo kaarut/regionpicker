@@ -1,25 +1,3 @@
-/*
-Copyright 2021 Google LLC
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
-const normalizedSuffix = "_normalized";
-const cfeAttr = "cfe";
-const carbonIntensityAttr = "gCO2_kWh";
-const priceAttr = "gce";
-const distanceAttr = "distance";
-
 function distance(destination, origin) {
     // Thanks https://www.movable-type.co.uk/scripts/latlong.html
     const R = 6371e3; // metres
@@ -42,6 +20,13 @@ function distance(destination, origin) {
  * @param {Object} map: a map of <region, data>
  * @param {String} attribute: the attribute in data to normalize against
  */
+
+const normalizedSuffix = "_normalized";
+const cfeAttr = "cfe";
+const carbonIntensityAttr = "gCO2_kWh";
+const priceAttr = "gce";
+const distanceAttr = "distance";
+
 function normalizeAttributes(map, attribute) {
     let min = Infinity;
     let max = -Infinity;
@@ -61,7 +46,8 @@ function normalizeAttributes(map, attribute) {
     }
 }
 
-function rankRegions(regions, inputs) {
+
+function rankRegions(regions, inputs, types=true) {
     let results = [];
     let latencyData;
 
@@ -93,12 +79,27 @@ function rankRegions(regions, inputs) {
             score += (1 - latencyData?.[region]?.[distanceAttr + normalizedSuffix]) * inputs.weights.latency;
         }
 
-        if (!isNaN(score)) {
-            results.push({
-                region: region,
-                properties: regions[region],
-                score: score,
-            });
+        if (!isNaN(score) && types.length == 0) {
+
+                results.push({
+                    region: region,
+                    properties: regions[region],
+                    score: score,
+                });
+        }
+
+        else {
+
+            if (types.includes(regions[region]['type'])) {
+
+                results.push({
+                    region: region,
+                    properties: regions[region],
+                    score: score,
+                });
+
+            }
+
         }
     }
 
@@ -109,10 +110,9 @@ function rankRegions(regions, inputs) {
     return resultSorted;
 }
 
-async function regionOptimizer(regions, inputs) {
-    // console.log('Optimizing with:', 'Regions:', regions, 'Inputs:', inputs)
+async function regionOptimizer(regions, inputs, types) {
 
-    return rankRegions(regions, inputs);
+    return rankRegions(regions, inputs, types);
 }
 
 

@@ -1,322 +1,660 @@
 {
-   "us-east-1":
-     {
-       "name": "Virginia",
-       "latitude": 38.13,
-       "longitude": -78.45,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "us-east-2":
-     {
-       "name": "Ohio",
-       "latitude": 39.96,
-       "longitude": -83,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "us-west-1":
-     {
-       "name": "California",
-       "latitude": 37.35,
-       "longitude": -121.96,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "us-west-2":
-     {
-       "name": "Oregon",
-       "latitude": 46.15,
-       "longitude": -123.88,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "eu-west-1":
-     {
-       "name": "Ireland",
-       "latitude": 53,
-       "longitude": -8,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "eu-west-2":
-     {
-       "name": "London",
-       "latitude": 51,
-       "longitude": -0.1,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "eu-west-3":
-     {
-       "name": "Paris",
-       "latitude": 48.86,
-       "longitude": 2.35,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "eu-central-1":
-     {
-       "name": "Frankfurt",
-       "latitude": 50,
-       "longitude": 8,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "sa-east-1":
-     {
-       "name": "Sao Paulo",
-       "latitude": -23.34,
-       "longitude": -46.38,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ap-southeast-1":
-     {
-       "name": "Singapore",
-       "latitude": 1.37,
-       "longitude": 103.8,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ap-southeast-2":
-     {
-       "name": "Sydney",
-       "latitude": -33.86,
-       "longitude": 151.2,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ap-northeast-1":
-     {
-       "name": "Tokyo",
-       "latitude": 35.41,
-       "longitude": 139.42,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ap-northeast-2":
-     {
-       "name": "Seoul",
-       "latitude": 37.56,
-       "longitude": 126.98,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ap-south-1":
-     {
-       "name": "Mumbai",
-       "latitude": 19.08,
-       "longitude": 72.88,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-     "ca-central-1":
-     {
-       "name": "Canada Central",
-       "latitude": 45.5,
-       "longitude": -73.6,
-       "provider": "aws",
-       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-     },
-
-
-
-
-   "asia-east1":{
-      "name":"Taiwan",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-east-1": {
+      "name": "Virginia",
+      "latitude": 38.13,
+      "longitude": -78.45,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "us-east-2": {
+      "name": "Ohio",
+      "latitude": 39.96,
+      "longitude": -83,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "us-west-1": {
+      "name": "California",
+      "latitude": 37.35,
+      "longitude": -121.96,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "us-west-2": {
+      "name": "Oregon",
+      "latitude": 46.15,
+      "longitude": -123.88,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-west-1": {
+      "name": "Ireland",
+      "latitude": 53,
+      "longitude": -8,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-west-2": {
+      "name": "London",
+      "latitude": 51,
+      "longitude": -0.1,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-west-3": {
+      "name": "Paris",
+      "latitude": 48.86,
+      "longitude": 2.35,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-central-1": {
+      "name": "Frankfurt",
+      "latitude": 50,
+      "longitude": 8,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "sa-east-1": {
+      "name": "Sao Paulo",
+      "latitude": -23.34,
+      "longitude": -46.38,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-southeast-1": {
+      "name": "Singapore",
+      "latitude": 1.37,
+      "longitude": 103.8,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-southeast-2": {
+      "name": "Sydney",
+      "latitude": -33.86,
+      "longitude": 151.2,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-northeast-1": {
+      "name": "Tokyo",
+      "latitude": 35.41,
+      "longitude": 139.42,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-northeast-2": {
+      "name": "Seoul",
+      "latitude": 37.56,
+      "longitude": 126.98,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-south-1": {
+      "name": "Mumbai",
+      "latitude": 19.08,
+      "longitude": 72.88,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ca-central-1": {
+      "name": "Canada Central",
+      "latitude": 45.5,
+      "longitude": -73.6,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-north-1": {
+      "name": "Stockholm",
+      "latitude": 59.25,
+      "longitude": 17.81,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "eu-south-1": {
+      "name": "Milan",
+      "latitude": 45.43,
+      "longitude": 9.29,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-northeast-3": {
+      "name": "Osaka",
+      "latitude": 34.69,
+      "longitude": 135.49,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "ap-east-1": {
+      "name": "Hong Kong",
+      "latitude": 22.27,
+      "longitude": 114.16,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "me-south-1": {
+      "name": "Bahrain",
+      "latitude": 26.10,
+      "longitude": 50.46,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "af-south": {
+      "name": "South Africa",
+      "latitude": -33.93,
+      "longitude": 18.42,
+      "type": "aws",
+      "flag": "/images/logos/aws-svg.svg"
+   },
+   "asia-east1": {
+      "name": "Taiwan",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 23.69781,
       "longitude": 120.960515
    },
-   "asia-east2":{
-      "name":"Hong Kong",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-east2": {
+      "name": "Hong Kong",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 22.396428,
       "longitude": 114.109497
    },
-   "asia-northeast1":{
-      "name":"Tokyo",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-northeast1": {
+      "name": "Tokyo",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 35.6762,
       "longitude": 139.6503
    },
-   "asia-northeast2":{
-      "name":"Osaka",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-northeast2": {
+      "name": "Osaka",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 34.6937,
       "longitude": 135.5023
    },
-   "asia-northeast3":{
-      "name":"Seoul",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-northeast3": {
+      "name": "Seoul",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 37.5665,
       "longitude": 126.9780
    },
-   "asia-south1":{
-      "name":"Delhi",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-south1": {
+      "name": "Delhi",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 19.0760,
       "longitude": 72.8777
    },
-   "asia-south2":{
-      "name":"Mumbai",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-south2": {
+      "name": "Mumbai",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 28.7041,
       "longitude": 77.1025
    },
-   "asia-southeast1":{
-      "name":"Singapore",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-southeast1": {
+      "name": "Singapore",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 1.3521,
       "longitude": 103.8198
    },
-   "asia-southeast2":{
-      "name":"Jakarta",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "asia-southeast2": {
+      "name": "Jakarta",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": -6.2088,
       "longitude": 106.8456
    },
-   "australia-southeast1":{
-      "name":"Sydney",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "australia-southeast1": {
+      "name": "Sydney",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": -33.8688,
       "longitude": 151.2093
    },
-   "australia-southeast2":{
-      "name":"Melbourne",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "australia-southeast2": {
+      "name": "Melbourne",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": -37.8136,
       "longitude": 144.9631
    },
-   "europe-central2":{
-      "name":"Warsaw, Poland",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-central2": {
+      "name": "Warsaw, Poland",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 52.2297,
       "longitude": 21.0122
    },
-   "europe-north1":{
-      "name":"Hamina, Finland",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-north1": {
+      "name": "Hamina, Finland",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 60.5693,
       "longitude": 27.1878
    },
-   "europe-west1":{
-      "name":"Belgium",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-west1": {
+      "name": "Belgium",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 50.5039,
       "longitude": 4.4699
    },
-   "europe-west2":{
-      "name":"London, UK",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-west2": {
+      "name": "London, UK",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 51.5074,
       "longitude": -0.1278
    },
-   "europe-west3":{
-      "name":"Frankfurt, Germany",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-west3": {
+      "name": "Frankfurt, Germany",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 50.1109,
       "longitude": 8.6821
    },
-   "europe-west4":{
-      "name":"Netherlands",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-west4": {
+      "name": "Netherlands",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 52.1326,
       "longitude": 5.2913
    },
-   "europe-west6":{
-      "name":"Zurich, Switzerland",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "europe-west6": {
+      "name": "Zurich, Switzerland",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 47.3769,
       "longitude": 8.5417
    },
-   "northamerica-northeast1":{
-      "name":"Montréal, Canada",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "northamerica-northeast1": {
+      "name": "Montréal, Canada",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 45.5017,
       "longitude": -73.5673
    },
-   "southamerica-east1":{
-      "name":"São Paulo",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "southamerica-east1": {
+      "name": "São Paulo",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": -23.5505,
       "longitude": -46.6333
    },
-   "us-central1":{
-      "name":"Iowa, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-central1": {
+      "name": "Iowa, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 41.8780,
       "longitude": -93.0977
    },
-   "us-east1":{
-      "name":"South Carolina, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-east1": {
+      "name": "South Carolina, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 33.8361,
       "longitude": -81.1637
    },
-   "us-east4":{
-      "name":"Northern Virginia, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-east4": {
+      "name": "Northern Virginia, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 38.8334,
       "longitude": -77.2365
    },
-   "us-west1":{
-      "name":"Oregon, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-west1": {
+      "name": "Oregon, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 43.8041,
       "longitude": -120.5542
    },
-   "us-west2":{
-      "name":"Los Angeles, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-west2": {
+      "name": "Los Angeles, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 34.0522,
       "longitude": -118.2437
    },
-   "us-west3":{
-      "name":"Salt Lake City, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-west3": {
+      "name": "Salt Lake City, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 40.7608,
       "longitude": -111.8910
    },
-   "us-west4":{
-      "name":"Las Vegas, USA",
-      "type":"Google",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
+   "us-west4": {
+      "name": "Las Vegas, USA",
+      "type": "google",
+      "flag": "images/logos/google-cloud-svg.svg",
       "latitude": 36.1699,
       "longitude": -115.1398
    },
-   "us-west-3":{
-      "name":"Virginia, USA",
-      "type":"AWS",
-      "flag": "https://static.cdnlogo.com/logos/g/75/google-cloud.svg",
-      "latitude": 38.13,
-      "longitude": -78.45
+   "us-mets5": {
+      "name": "Las Vegas, UBA",
+      "type": "lammo",
+      "flag": "images/logos/google-cloud-svg.svg",
+      "latitude": 36.1699,
+      "longitude": -115.1398
+   },
+   "eastasia": {
+      "name": "East Asia",
+      "latitude": 22.267,
+      "longitude": 114.188,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "southeastasia": {
+      "name": "Southeast Asia",
+      "latitude": 1.283,
+      "longitude": 103.833,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "centralus": {
+      "name": "Central US",
+      "latitude": 41.5908,
+      "longitude": -93.6208,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "eastus": {
+      "name": "East US",
+      "latitude": 37.3719,
+      "longitude": -79.8164,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "eastus2": {
+      "name": "East US 2",
+      "latitude": 36.6681,
+      "longitude": -78.3889,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westus": {
+      "name": "West US",
+      "latitude": 37.783,
+      "longitude": -122.417,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "northcentralus": {
+      "name": "North Central US",
+      "latitude": 41.8819,
+      "longitude": -87.6278,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "southcentralus": {
+      "name": "South Central US",
+      "latitude": 29.4167,
+      "longitude": -98.5,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "northeurope": {
+      "name": "North Europe",
+      "latitude": 53.3478,
+      "longitude": -6.2597,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westeurope": {
+      "name": "West Europe",
+      "latitude": 52.3667,
+      "longitude": 4.9,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "japanwest": {
+      "name": "Japan West",
+      "latitude": 34.6939,
+      "longitude": 135.5022,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "japaneast": {
+      "name": "Japan East",
+      "latitude": 35.68,
+      "longitude": 139.77,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "brazilsouth": {
+      "name": "Brazil South",
+      "latitude": -23.55,
+      "longitude": -46.633,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "australiaeast": {
+      "name": "Australia East",
+      "latitude": -33.86,
+      "longitude": 151.2094,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "australiasoutheast": {
+      "name": "Australia Southeast",
+      "latitude": -37.8136,
+      "longitude": 144.9631,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "southindia": {
+      "name": "South India",
+      "latitude": 12.9822,
+      "longitude": 80.1636,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "centralindia": {
+      "name": "Central India",
+      "latitude": 18.5822,
+      "longitude": 73.9197,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westindia": {
+      "name": "West India",
+      "latitude": 19.088,
+      "longitude": 72.868,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "jioindiawest": {
+      "name": "Jio India West",
+      "latitude": 22.470701,
+      "longitude": 70.05773,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "jioindiacentral": {
+      "name": "Jio India Central",
+      "latitude": 21.146633,
+      "longitude": 79.08886,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "canadacentral": {
+      "name": "Canada Central",
+      "latitude": 43.653,
+      "longitude": -79.383,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "canadaeast": {
+      "name": "Canada East",
+      "latitude": 46.817,
+      "longitude": -71.217,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "uksouth": {
+      "name": "UK South",
+      "latitude": 50.941,
+      "longitude": -0.799,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "ukwest": {
+      "name": "UK West",
+      "latitude": 53.427,
+      "longitude": -3.084,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westcentralus": {
+      "name": "West Central US",
+      "latitude": 40.89,
+      "longitude": -110.234,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westus2": {
+      "name": "West US 2",
+      "latitude": 47.233,
+      "longitude": -119.852,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "koreacentral": {
+      "name": "Korea Central",
+      "latitude": 37.5665,
+      "longitude": 126.978,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "koreasouth": {
+      "name": "Korea South",
+      "latitude": 35.1796,
+      "longitude": 129.0756,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "francecentral": {
+      "name": "France Central",
+      "latitude": 46.3772,
+      "longitude": 2.373,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "francesouth": {
+      "name": "France South",
+      "latitude": 43.8345,
+      "longitude": 2.1972,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "australiacentral": {
+      "name": "Australia Central",
+      "latitude": -35.3075,
+      "longitude": 149.1244,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "australiacentral2": {
+      "name": "Australia Central 2",
+      "latitude": -35.3075,
+      "longitude": 149.1244,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "uaecentral": {
+      "name": "UAE Central",
+      "latitude": 24.466667,
+      "longitude": 54.366669,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "uaenorth": {
+      "name": "UAE North",
+      "latitude": 25.266666,
+      "longitude": 55.316666,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "southafricanorth": {
+      "name": "South Africa North",
+      "latitude": -25.73134,
+      "longitude": 28.21837,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "southafricawest": {
+      "name": "South Africa West",
+      "latitude": -34.075691,
+      "longitude": 18.843266,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "switzerlandnorth": {
+      "name": "Switzerland North",
+      "latitude": 47.451542,
+      "longitude": 8.564572,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "switzerlandwest": {
+      "name": "Switzerland West",
+      "latitude": 46.204391,
+      "longitude": 6.143158,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "germanynorth": {
+      "name": "Germany North",
+      "latitude": 53.073635,
+      "longitude": 8.806422,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "germanywestcentral": {
+      "name": "Germany West Central",
+      "latitude": 50.110924,
+      "longitude": 8.682127,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "norwaywest": {
+      "name": "Norway West",
+      "latitude": 58.969975,
+      "longitude": 5.733107,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "norwayeast": {
+      "name": "Norway East",
+      "latitude": 59.913868,
+      "longitude": 10.752245,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "brazilsoutheast": {
+      "name": "Brazil Southeast",
+      "latitude": -22.90278,
+      "longitude": -43.2075,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "westus3": {
+      "name": "West US 3",
+      "latitude": 33.448376,
+      "longitude": -112.074036,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
+   },
+   "swedencentral": {
+      "name": "Sweden Central",
+      "latitude": 60.67488,
+      "longitude": 17.14127,
+      "type": "azure",
+      "flag": "images/logos/azure.svg"
    }
 }

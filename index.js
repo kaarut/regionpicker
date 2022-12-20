@@ -1,19 +1,3 @@
-/*
-Copyright 2021 Google LLC
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
 import { regionOptimizer } from './region-optimizer.js';
 
 const regionsToDisplay = 10;
@@ -34,7 +18,7 @@ async function fetchData() {
 
   // Fetch data in parrallel
   await Promise.all([
-      fetch("data/regions.json")
+      fetch("data/regions-combined.json")
           .then(data => data.json())
           .then(json => regions = json)
   ]);
@@ -46,6 +30,11 @@ async function fetchData() {
 
 function bindListeners() {
   
+
+  // Clicked on the iaas icon
+  document.getElementById('checBoxContainer').addEventListener('click', recommendRegion);
+
+  // Location has been activated
   document.getElementById('locations').addEventListener('change', recommendRegion);
   
   let activa = document.querySelector("autocomplete-active");
@@ -92,12 +81,13 @@ function printResultInList(list, result) {
   row.querySelector('.region').textContent = result.region;
   row.querySelector('.name').textContent = result.properties.name;
   row.querySelector('.flag').src = result.properties.flag;
+  row.querySelector('.score').textContent = Math.round(result.score * 1000 - 1) / 10 + '%';
 
     // document.querySelectorAll(".blank").forEach(element => element.classList.add("hidden"));
 
   list.appendChild(row);
 
-  if (document.getElementById("target_location").value == ""){
+  if (document.getElementById("target_location").value == "" && getCheckedTypes().length == 0){
     document.querySelectorAll(".child").forEach(element => element.classList.add("hidden"));
   } else {
     document.querySelectorAll(".child").forEach(element => element.classList.remove("hidden"));
@@ -106,6 +96,19 @@ function printResultInList(list, result) {
 
 }
 
+// Get values, that have been highlighted
+function getCheckedTypes(){
+
+  const list = new Array;
+  var checkBoxes;
+  checkBoxes = document.getElementsByClassName('checked');
+
+  for (const checkBox of checkBoxes){
+    list.push(checkBox.id);
+  }
+  return list;
+  
+}
 
 async function recommendRegion() {
   if(!regions && !fetching) {
@@ -128,15 +131,15 @@ async function recommendRegion() {
 
     }
   }
-  
-  regionOptimizer(regions, params).then(printResults);
+
+  const types = getCheckedTypes();  
+  regionOptimizer(regions, params, types).then(printResults);
 
 };
-
 
 initializeCountrySelect();
 bindListeners();
 recommendRegion();
 
-export {recommendRegion }
+export {recommendRegion}
 
