@@ -392,6 +392,7 @@ ul {
   .bloger {
     padding: var(--base-unit);
     display: flex;
+    flex-direction: column;
   }
 
 }
@@ -546,6 +547,7 @@ li {
 
   .blog {
     margin: 0px auto;
+    margin-top: 10px;
     width: 60%;
     padding: 30px;
   }
@@ -732,7 +734,6 @@ details[open] {
   flex: 1;
   margin: 15px;
   padding: 10px;
-  flex: 1 0 150px;
   box-shadow: rgb(9 30 66 / 31%) 0px 0px 2px 0px, rgb(9 30 66 / 25%) 0px 1.5px 1.5px 0px;
   padding: 8px 16px;
   border: 1px solid rgb(250, 251, 252);
