@@ -74,15 +74,6 @@ header {
   /* background-image: url(images/amazon-web-services-1.svg); */
 }
 
-footer {
-  background-color: #F1F3F4;
-  color: #5F6368;
-  font-size: 0.8rem;
-  padding: var(--base-unit);
-  text-align: center;
-  display: block;
-}
-
 #locations {
   display: none;
 }
@@ -95,14 +86,12 @@ main {
 }
 
 footer {
-  background-color: #F1F3F4;
-  color: #5F6368;
-  font-size: 0.8rem;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); */
+  height: 80px; /** not so sure why I need to use such big height to get */
   padding: var(--base-unit);
+  background-origin: content-box;
+  background-repeat: no-repeat; 
+  text-align: center;
 }
 
 .group {
@@ -518,11 +507,11 @@ li {
     align-items: center;
   }
 
-  footer {
+  /* footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 
   .search_div {
     position: sticky;
@@ -557,14 +546,14 @@ li {
 
   .blog {
     margin: 0px auto;
-    width: 50%;
-    padding: var(--base-unit);
+    width: 60%;
+    padding: 30px;
   }
 
   .bloger {
     margin: 0px auto;
-    width: 50%;
-    padding: var(--base-unit);
+    width: 60%;
+    padding: 30px;
     display: flex;
   }
 }
@@ -740,8 +729,21 @@ details[open] {
 }
 
 .article {
-  width: 50%;
+  flex: 1;
   margin: 15px;
+  padding: 10px;
+  flex: 1 0 150px;
+  box-shadow: rgb(9 30 66 / 31%) 0px 0px 2px 0px, rgb(9 30 66 / 25%) 0px 1.5px 1.5px 0px;
+  padding: 8px 16px;
+  border: 1px solid rgb(250, 251, 252);
+  /* border: 1px solid var(--theme-color); */
+  border-radius: 30px;
+  text-align: center;
+}
+
+.article:hover {
+  box-shadow: rgb(53, 24, 90 / 31%) 0px 0px 2px 0px, rgb(53, 24, 90 / 25%) 0px 11.5px 11.5px 0px;
+  border: 1px solid rgb(53, 24, 90, 0.1);
 }
 
 a {
