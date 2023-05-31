@@ -400,6 +400,11 @@ ul {
     padding: var(--base-unit);
   }
 
+  .bloger {
+    padding: var(--base-unit);
+    display: flex;
+  }
+
 }
 
 
@@ -554,6 +559,13 @@ li {
     margin: 0px auto;
     width: 50%;
     padding: var(--base-unit);
+  }
+
+  .bloger {
+    margin: 0px auto;
+    width: 50%;
+    padding: var(--base-unit);
+    display: flex;
   }
 }
 
@@ -730,13 +742,6 @@ details[open] {
 .article {
   width: 50%;
   margin: 15px;
-}
-
-.bloger {
-  margin: 0px auto;
-  width: 50%;
-  padding: var(--base-unit);
-  display: flex;
 }
 
 a {
