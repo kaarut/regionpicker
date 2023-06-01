@@ -310,6 +310,10 @@ ul {
     display: block;
   }
 
+  details[open] {
+    padding: 0px;
+  }
+
   ::marker {
     font-size: 0px !important;
   }
@@ -365,6 +369,7 @@ ul {
 
   .group.regions {
     text-align: center;
+    border-radius: 10px;
     /* padding-left: calc(1.85 * var(--base-unit));; */
   }
 
@@ -388,9 +393,6 @@ ul {
     margin: 10px !important;
   }
 
-  h1 {
-    font-size: 18px;
-  }
 
   .blog {
     padding: var(--base-unit);
@@ -601,7 +603,7 @@ ul {
 }
 
 main {
-  padding: 25px;
+  padding: 15px;
 }
 
 .symbols-group {
@@ -635,10 +637,6 @@ summary.list-content {
 
 details {
   padding: 25px;
-}
-
-details[open] {
-    padding: 25px;
 }
 
 .parent {
@@ -765,4 +763,10 @@ a {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+
+.group.regions {
+  border-radius: 10px;
+  /* padding-left: calc(1.85 * var(--base-unit));; */
 }
