@@ -36,11 +36,11 @@ h1, h2 {
 }
 
 h1{
-  font-size: 2.5em;
+  font-size: 4vh;
 }  
 
 h2{
-  font-size: 1.25em;
+  font-size: 2.5vh;
 }
 
 h1 .accent, h2 {
@@ -310,6 +310,10 @@ ul {
     display: block;
   }
 
+  ::marker {
+    font-size: 0px !important;
+  }
+
   /* .params {
     padding: calc(var(--half-unit) * 3);
   } */
@@ -322,6 +326,7 @@ ul {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
   }
 
   .weight-info {
@@ -335,8 +340,8 @@ ul {
 
   #results > li {
     padding: var(--half-unit);
-    margin-left: -30px;
-    margin-right: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
     min-height: calc(3 * var(--base-unit));
   }
 
@@ -360,7 +365,7 @@ ul {
 
   .group.regions {
     text-align: center;
-    padding-left: calc(1.85 * var(--base-unit));;
+    /* padding-left: calc(1.85 * var(--base-unit));; */
   }
 
   .autocomplete-container input {
