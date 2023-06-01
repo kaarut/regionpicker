@@ -1,4 +1,4 @@
-import { regionOptimizer } from './region-optimizer.js';
+import { regionOptimizer } from '../region-optimizer.js';
 
 const regionsToDisplay = 10;
 
