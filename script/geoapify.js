@@ -252,4 +252,3 @@ addressAutocomplete(document.getElementById("target_search"), (data) => {
 }, {
   placeholder: "City or a country ..."
 });
-
