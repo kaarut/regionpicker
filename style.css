@@ -268,7 +268,7 @@ ul {
 }
 
 #results > li summary {
-  /* display: inline-flex; */
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -749,4 +749,12 @@ details[open] {
 
 a {
   text-decoration-color: rgb(119, 48, 212);
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
