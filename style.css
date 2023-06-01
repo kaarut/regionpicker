@@ -753,6 +753,7 @@ a {
 
 .no-underline {
   text-decoration: none;
+  color: var(--theme-color) !important;
 }
 
 *, *:before, *:after {
