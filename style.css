@@ -240,7 +240,8 @@ details > summary {
   padding: var(--base-unit);
   margin: var(--base-unit);
   min-height: calc(6 * var(--base-unit));
-  box-shadow: rgb(153 19 19 / 60%) 0px 4px 12
+  box-shadow: rgb(153 19 19 / 60%) 0px 4px 12;
+  text-align: center;
 }
 
 #results.short li:nth-child(6),
