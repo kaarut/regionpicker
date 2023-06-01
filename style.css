@@ -310,9 +310,10 @@ ul {
     display: block;
   }
 
-  .params {
+  /* .params {
     padding: calc(var(--half-unit) * 3);
-  }
+  } */
+
   input[type=range] {
     /** TODO: do not hardcode 6 */
     width: calc(var(--base-width) / 6);
@@ -334,8 +335,8 @@ ul {
 
   #results > li {
     padding: var(--half-unit);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -30px;
+    margin-right: -20px;
     min-height: calc(3 * var(--base-unit));
   }
 
@@ -543,7 +544,7 @@ li {
 
   .child {
     
-    font-size: 1.3rem;
+    font-size: 2vh;
   }
 
   .blog {
