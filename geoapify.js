@@ -250,6 +250,6 @@ addressAutocomplete(document.getElementById("target_search"), (data) => {
 
   // console.log(data);
 }, {
-  placeholder: "Insert an address ..."
+  placeholder: "City or a country ..."
 });
 
