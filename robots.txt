@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://regionpicker.com/sitemap.xml

@@ -36,11 +36,11 @@ h1, h2 {
 }
 
 h1{
-  font-size: 4vh;
+  font-size: 33px;
 }  
 
-h2{
-  font-size: 2.5vh;
+h2 {
+  font-size: 20px;
 }
 
 h1 .accent, h2 {
@@ -517,6 +517,10 @@ li {
     align-items: center;
   }
 
+  h2 {
+    font-size: 25px;
+  }
+
   /* footer {
     display: flex;
     flex-wrap: wrap;
@@ -769,4 +773,30 @@ a {
 .group.regions {
   border-radius: 10px;
   /* padding-left: calc(1.85 * var(--base-unit));; */
+}
+
+table {
+  width: 100%; 
+  background-color: #f2e9f8;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px 10px 15px;
+}
+
+table td {
+  font-weight: 500;
+  /* border: 1px solid #f0f1f1; */
+  word-break: keep-all !important;
+  vertical-align: middle;
+}
+
+tr.heading {
+  border-bottom: 1px solid black;
+}
+
+mark.best-option {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--theme-color);;
+  font-weight: bold;
 }
