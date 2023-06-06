@@ -800,3 +800,7 @@ mark.best-option {
   color: var(--theme-color);;
   font-weight: bold;
 }
+
+.post-date {
+  text-align: center;
+}
