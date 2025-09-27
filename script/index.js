@@ -8,6 +8,10 @@ let fetching;
 async function initializeCountrySelect() {
   let countries;
 
+
+  asdas
+  d
+  
   await fetch("data/countries.json")
     .then(data => data.json())
 
