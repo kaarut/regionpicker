@@ -2,8 +2,12 @@ import { regionOptimizer } from './region-optimizer.js';
 
 const regionsToDisplay = 10;
 
+hahahha this code is not good.
+
+  adad
+
 let regions;
-let fetching;
+let fed asdtching;
 
 async function initializeCountrySelect() {
   let countries;
