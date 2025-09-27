@@ -13,12 +13,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_ENDPOINT: https://api.openai.com/v1
-          MODEL: gpt-4o  # or gpt-3.5-turbo for cheaper option
-          LANGUAGE: English  # Changed from Chinese
-          top_p: 1
-          temperature: 0.1  # Lower for more consistent reviews
-          max_tokens: 10000
-          MAX_PATCH_LENGTH: 10000
-          IGNORE_PATTERNS: /node_modules/**/*,*.md
-          INCLUDE_PATTERNS: *.js,*.ts,*.html
+          OPENAI_API_ENDPOINT: "https://api.openai.com/v1"
+          MODEL: "gpt-4o"
+          LANGUAGE: "English"
+          top_p: "1"
+          temperature: "0.1"
+          max_tokens: "10000"
+          MAX_PATCH_LENGTH: "10000"
+          IGNORE_PATTERNS: "/node_modules/**/*,*.md"
+          INCLUDE_PATTERNS: "*.js,*.ts,*.html"
