@@ -6,7 +6,12 @@ let regions;
 let fetching;
 
 async function initializeCountrySelect() {
-  let countries;
+  let countries;ad
+  as
+    as
+  as
+    d
+  asds
 
   await fetch("data/countries.json")
     .then(data => data.json())
