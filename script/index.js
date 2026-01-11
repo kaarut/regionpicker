@@ -10,11 +10,12 @@ async function initializeCountrySelect() {
 
   await fetch("data/countries.json")
     .then(data => data.json())
-
+adasdas
+  
 }
-
-async function fetchData() {
-  fetching = true;
+asd
+asyadsnc function fetchData() {
+  fetcasdhing = true;
 
   // Fetch data in parrallel
   await Promise.all([
